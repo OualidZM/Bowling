@@ -24,7 +24,8 @@ class Bowling:
 
 
                         try:                                                                #si se cumple el if, entonces se pondrá un 10 en el lugar de la 'X' y
-                                                                                            #los dos próximos números que vienen se pasaran de string a int para luego sumar-los
+                                                                                            #los dos próximos números que vienen se pasaran de string a int para 
+                                                                                            # luego sumar-los
                             position = frame[poscion] = 10
                             next_pin = int(frame[poscion+1])
                             next_pin_two = int(frame[poscion+2])
@@ -39,8 +40,8 @@ class Bowling:
                                         continue
                             except:
                                 continue
-                        except:                                                         #Si al encontrarse un strike(X) y dos números  más adelante vuelve a ser otro strike,
-                                                                                        #esto tendrá que sumar, primero el primer strike encontrado +10, luego
+                        except:                                                         #Si al encontrarse un strike(X) y dos números  más adelante vuelve a ser otro
+                                                                                        # strike,esto tendrá que sumar, primero el primer strike encontrado +10, luego
                                                                                         #el número de al medio y finalmente el strike del final +10. 
                                                                                         #Si encuentra un spare(/) entonces sumara strike +10 y spare +10 y se parara
                             if frame[poscion+2] == 'X':
